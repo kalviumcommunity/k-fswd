@@ -3,7 +3,7 @@
 // read from the pocess.env and assign the values
 const config = {
   api_key: '',
-  secrect: '',
+  secret: '',
   is_kalvian: process.env.IS_KALVIAN ?? false
 }
 
