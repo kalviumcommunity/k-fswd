@@ -1,6 +1,10 @@
 # Welcome to the Command Line Basics Exercise!
 
-Let's dive into the world of command line interfaces, a crucial skill for aspiring full-stack web developers. Follow these simple instructions to acquaint yourself with the current versions of Git, NPM, and Node.js on your system.
+## 🎯 Objectives
+
+Embark on your journey as a promising full-stack web developer by mastering the art of command line interfaces. Familiarize yourself with the latest versions of Git, NPM, and Node.js on your system.
+
+## 🚀 Steps
 
 1. Open your terminal or command prompt.
 2. Discover the version of Git installed by using the appropriate command.
@@ -8,4 +12,7 @@ Let's dive into the world of command line interfaces, a crucial skill for aspiri
 4. Similarly, use the command line to unveil the current version of Node.js.
 5. Once you've gathered this information, proceed to the quiz to assess your command line prowess.
 
-Happy coding! 🚀
+## 🏁 Outcome
+By the end of this session, you will have a solid understanding of how to use the command line to check the versions of Git, NPM, and Node.js. This knowledge is an essential building block for your full-stack web development journey.
+
+Happy Coding! 🚀
