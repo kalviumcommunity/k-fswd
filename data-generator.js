@@ -5,12 +5,12 @@ const generateData = () => {
   for (let i = 0; i < 20; i++) {
     user.push({
       id: faker.string.uuid(),
-      name: faker.name.findName(),
+      name: faker.person.fullName(),
       email: faker.internet.email(),
-      phone: faker.phone.phoneNumber(),
-      address: faker.address.streetAddress(),
+      phone: faker.phone.number(),
+      address: faker.location.streetAddress(),
       image: faker.image.avatar(),
-      company: faker.company.companyName(),
+      company: faker.company.name(),
     });
   }
   return user;
