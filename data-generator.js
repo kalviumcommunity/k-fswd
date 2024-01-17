@@ -1,5 +1,4 @@
-const { faker } = require('@fak')
-
+const { faker } = require('@faker-js/faker')
 
 const generateData = () => {
   const user = [];
