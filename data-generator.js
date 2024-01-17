@@ -4,7 +4,7 @@ const generateData = () => {
   const user = [];
   for (let i = 0; i < 20; i++) {
     user.push({
-      id: faker.random.uuid(),
+      id: faker.string.uuid(),
       name: faker.name.findName(),
       email: faker.internet.email(),
       phone: faker.phone.phoneNumber(),
