@@ -1,25 +1,25 @@
-# Lab Exercise: Understanding PUT and PATCH Endpoints
+# Lab Exercise: Understanding API Client
 
 ## 🎯 Objectives
 
-In this module, you will learn how to create PUT and PATCH endpoints in a RESTful API. You will also understand the specific scenarios in which each should be used.
+In this module, you will learn how to use the API client to test your endpoints.
 
 ## 🔑 Prerequisites
 
-Basic knowledge of JavaScript, Node.js, and RESTful API principles is required.
+Basic knowledge of JavaScript, Node.js required.
 
 ## 🚀 Steps
 
-1. **Understand the difference:** First, familiarize yourself with the differences between PUT and PATCH requests.
+1. Start the server by running `npm start` in the terminal.
 
-3. **Create the PUT endpoint:** Create a PUT endpoint that will update an entire resource.
+2. Download and install [Bruno](https://www.usebruno.com/) to test your endpoints.
 
-4. **Create the PATCH endpoint:** Now, create a PATCH endpoint that will update only specific fields of a resource.
+3. Get your API link from the Codedamn Console and paste it in Bruno.
 
-6. **Identify when to use PUT or PATCH:** Based on the scenarios given, decide when it's best to use a PUT request or a PATCH request.
+4. Send a GET request to the API link to get the data.
 
 > 💡 You may use Bruno to test you endpoint.
 
 ## 🎁 Outcome
 
-By the end of this module, you will be comfortable creating and using PUT and PATCH endpoints, and you'll have a better understanding of when to use each method in real-world scenarios. 🚀🌐
+By the end of this module, you will be comfortable with using the API client to test your endpoints. 🚀🌐
