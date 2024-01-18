@@ -5,23 +5,14 @@ const PORT = process.env.PUBLIC_PORT;
 
 app.use(express.json());
 
-// use the endpoint below and hit the end point with the following data:
-// { "best_ug_degree": "kalvium" }
-app.post('/', (req, res) => {
-    const data = req.body;
+// 1. define a POST route
+// 2. use the below json object as request body to test the route from bruno
 
-    fs.writeFile('data.js', JSON.stringify(data, null, 2), (err) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Error writing to file');
-        } else {
-            res.status(200).send('Data written to file');
-        }
-    });
-});
+// { "best_ug_degree": "kalvium" }
+
 
 app.listen(PORT, () => {
-    console.log('Server is running on port 3000');
+    console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = app;
