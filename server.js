@@ -5,9 +5,7 @@ const genrateData = require('./data-generator');
 
 const data = genrateData()
 
-app.get('/', (req, res) => {
-  res.json(data)
-});
+// define a GET endpoint which returns the data variable defined above as response
 
 if (require.main === module) {
   app.listen(port, () => {
