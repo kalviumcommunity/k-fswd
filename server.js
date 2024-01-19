@@ -9,13 +9,8 @@ const users = genrateData();
 // define the /users route with the response in JSON
 // if the process.env.IS_ADMIN is true, then return the personal property as well
 app.get('/users', (req, res) => {
-  const { IS_ADMIN } = process.env;
-
-  if (IS_ADMIN === 'true') {
-    return res.json(users);
-  }
-
-  return res.json(users.map(({ personal, ...user }) => user));
+  // Your code here
+  res.json([])
 });
 
 if (require.main === module) {
