@@ -1,7 +1,7 @@
-# Lab Exercise: Utilize the req.params and Return a Filtered JSON Array
+# Lab Exercise: Utilize the req.query and Return a JSON Array
 
 ## 🎯 Objectives
-- Understand how to use `req.params` to extract parameters from a URL in Express.js.
+- Understand how to use `req.query` to extract parameters from a URL in Express.js.
 - Learn how to filter a JSON array and return the filtered results.
 
 ## 📚 Prerequisites
@@ -11,7 +11,7 @@
 
 1. Open the 'server.js' file.
 2. Create a new route that will return a filtered JSON array based on the parameters passed in the URL.
-3. Extract the parameters from the URL using `req.params`.
+3. Extract the parameters from the URL using `req.query`.
 4. Filter the JSON array based on the parameters.
 5. Return the filtered JSON array to the client.
 
