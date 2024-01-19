@@ -26,7 +26,7 @@ cat > /home/damner/code/.labtests/package.json << EOF
 EOF
 
 # run test
-(yarn jest --json --outputFile=/home/damner/code/.labtests/payload.json || true)  | tee /home/damner/code/.labtests/evaluationscript.log
+(yarn jest --json --silent --outputFile=/home/damner/code/.labtests/payload.json || true)  | tee /home/damner/code/.labtests/evaluationscript.log
 
 # Write results to UNIT_TEST_OUTPUT_FILE to communicate to frontend
 cd /home/damner/code/.labtests
