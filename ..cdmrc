@@ -1,2 +1,2 @@
-tabs: ['server.js']
+tabs: ['server.js', 'data-generator.js']
 terminals: ['yarn']
