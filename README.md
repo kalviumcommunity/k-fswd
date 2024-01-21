@@ -1,4 +1,4 @@
-# Write Mongoose Schema for the Given JSON Object
+# Lab Exercise: Write Mongoose Schema for the Given JSON Object 
 
 ## 🎯 Objectives
 
