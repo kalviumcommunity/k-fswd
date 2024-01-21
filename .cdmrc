@@ -1,0 +1,2 @@
+tabs: ['index.js', './model/User.js', '/model/Squad.js'];
+terminals: ['yarn']
