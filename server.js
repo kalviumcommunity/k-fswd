@@ -1,7 +1,7 @@
 const express = require('express');
-const fs = require('fs');
 const app = express();
-const PORT = process.env.PUBLIC_PORT;
+
+const port = process.env.PUBLIC_PORT ?? 8000;
 
 app.use(express.json());
 
@@ -10,9 +10,19 @@ app.use(express.json());
 
 // { "best_ug_degree": "kalvium" }
 
+app.post('/api/data', (req, res) => {
+  // console log the request body
+  // or
+  // return the request body as response
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  // your code here
 });
+
+
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`🚀 server running on PORT: ${port}`);
+  });
+}
 
 module.exports = app;
