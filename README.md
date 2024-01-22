@@ -13,7 +13,7 @@
 
 2. **Create a database connection:** Use the MongoDB driver to establish a connection to your database. Make sure to handle both the success and error cases.
 
-3. **Implement connection status logic:** Create a function that returns the current status of the database connection.
+3. **Implement connection status logic:** See the [db.js](./db.js) file for more instructions.
 
 4. **Create your homepage route:** Use Express.js to set up a route for your homepage (`/`).
 
