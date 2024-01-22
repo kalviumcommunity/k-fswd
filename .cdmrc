@@ -1,2 +1,2 @@
-tabs: ['db.js']
+tabs: ['db.js', 'config.js']
 terminals: ['yarn']
