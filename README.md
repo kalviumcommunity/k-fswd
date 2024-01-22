@@ -1,14 +1,14 @@
 # Lab Exercise: Add react-router-dom to the React App and Create a /home Page with a Welcome Note 🚀
 
-## Objectives 🎯
+## 🎯 Objectives
 
 In this module, we will incorporate `react-router-dom` into our React application to enable routing. We'll also create a `/home` page that displays a warm welcome note to the user.
 
-## Prerequisites 📚
+## 📚 Prerequisites
 
 You should have a basic understanding of React and Node.js. Familiarity with npm or yarn is also required.
 
-## Steps 🚶‍♂️
+## 🚀 Steps
 
 1. **Install react-router-dom** 📦: Run `npm install react-router-dom` or `yarn add react-router-dom` in your project directory.
 
@@ -23,6 +23,6 @@ You should have a basic understanding of React and Node.js. Familiarity with npm
 6. **Set up the Route** 🛣️: Use the `Route` component inside `Routes` to set up the `/home` route. Assign the `Home` component to this route.
 
 
-## Outcome 🎉
+## 🎉 Outcome
 
 By the end of this module, you will have successfully added `react-router-dom` to your React app and created a `/home` page that displays a welcome note. Your app now has the foundational setup for routing between different pages.
