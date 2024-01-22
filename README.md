@@ -9,7 +9,7 @@
 
 ## 🚀 Steps
 
-1. **Set up your project:** Initialize a new Node.js project and install Express.js and MongoDB driver using npm.
+1. **Set up your project:** Wait for the `yarn` command to finish installing the dependencies. Then, start your server by running the `yarn start` command.
 
 2. **Create a database connection:** Use the MongoDB driver to establish a connection to your database. Make sure to handle both the success and error cases.
 
