@@ -15,7 +15,10 @@ app.post('/api/data', (req, res) => {
   // or
   // return the request body as response
 
+  // make sure you return a 201 status code
+
   // your code here
+  res.json({}); // replace this with your response
 });
 
 
