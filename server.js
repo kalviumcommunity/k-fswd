@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PUBLIC_PORT;
+const PORT = process.env.PUBLIC_PORT ?? 8000;
 
 app.use(express.json());
 
@@ -15,8 +15,10 @@ app.use(express.json());
 // After creating the endpoint make the request from bruno
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`🚀 server running on PORT: ${port}`);
+  });
+}
 
 module.exports = app;
