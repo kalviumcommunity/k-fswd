@@ -1,0 +1,2 @@
+tabs: ['README.md']
+terminals: ['yarn && yarn dev']
