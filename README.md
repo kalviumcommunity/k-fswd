@@ -1,4 +1,4 @@
-# Setup Linting in the Project
+# Lab Exercise: Setup Linting in the Project
 
 ## 🎯 Objectives
 This guide will help you set up a linter in your full stack development project to enforce code quality and consistency. You'll learn how to automate linting to catch errors before they make it into production.
