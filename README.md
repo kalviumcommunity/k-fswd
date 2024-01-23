@@ -1,35 +1,27 @@
-# Lab Exercise: Building and Deploying Applications
+# Lab Exercise: Write Build Script in the package.json and Build the App 🚀
 
 ## 🎯 Objectives
 
-- Understand the importance of build scripts in package.json for full stack development.
-- Learn how to write a build script and use it to build your application.
+In this module, you will learn how to write a build script in the package.json file to automate the build process of your full stack application. Understanding the importance of build scripts is crucial for a smooth and efficient development workflow.
 
 ## 📚 Prerequisites
 
-Basic knowledge of JavaScript and Node.js.
+To complete this exercise, you should have a basic understanding of JavaScript, Node.js, and npm or yarn.
 
 ## 🚀 Steps
 
-1. Open your project's package.json file.
+1. **Open package.json**: Locate and open the package.json file in your project directory.
 
-2. Locate the "scripts" section and add a new key-value pair for the build script.
+2. **Add a Build Script**: Inside the "scripts" section of the package.json file, add a new key-value pair with the key "build" and the value as the build command for your app.
 
-3. Define the build script command, specifying the necessary build steps (e.g., transpiling, bundling, minification).
+3. **Define the Build Command**: Specify the command that needs to be executed to build your app. This can include tasks such as transpiling, bundling, minifying, or any other necessary steps.
 
-4. Save the package.json file.
+4. **Save the Changes**: Save the package.json file after adding the build script.
 
-5. Open your terminal and navigate to the project directory.
+5. **Run the Build Script**: Open your terminal, navigate to the project directory, and execute the build script using the command `npm run build` or `yarn build`.
 
-6. Run the build script using the npm run command followed by the script name.
-
-7. Monitor the terminal for any errors or warnings during the build process.
-
-8. Verify that the build process has generated the required output files (e.g., bundled JavaScript, optimized CSS).
-
-9. Test the built application locally to ensure it functions as expected.
-
+6. **Verify the Build**: Check the output of the build process and ensure that the necessary build artifacts are generated successfully.
 
 ## 🎉 Outcome
 
-By the end of this course, you will be able to write a build script in package.json and successfully build your full stack application, ready for deployment. 🚀
+By the end of this module, you will have successfully written a build script in the package.json file and automated the build process for your full stack application. This will streamline your development workflow and prepare your app for deployment. Happy building! 🚀
