@@ -17,7 +17,8 @@ A basic understanding of JavaScript, React, and RESTful APIs is required.
 
 5. **Displaying the Data**: Use React components to display the fetched data on your web page. This can involve creating a dynamic list, table, or any other suitable format.
 
-6. **Styling your App**: Use CSS or a library like `styled-components` to style your application and make the displayed data visually appealing.
+   > 💡Note: See the [Post.jsx](./src/conponents/Post.jsx) file.
+
 
 ## 🏁 Outcome
 By the end of this course, you'll have a fully functional React application that fetches and displays data from an external API, demonstrating your proficiency in handling server responses and updating UI dynamically. 🎉
