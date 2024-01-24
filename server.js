@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const PORT = process.env.PUBLIC_PORT ?? 8000;
+const port = process.env.PUBLIC_PORT ?? 8000;
 
 app.use(express.json());
 
