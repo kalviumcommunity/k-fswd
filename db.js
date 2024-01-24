@@ -6,21 +6,20 @@ const { MongoMemoryServer } = require('mongodb-memory-server');
 let mongoServer;
 let connectionStatus = 'disconnected';
 
-const startDatabase = async () => {
-  if (!mongoServer) {
-    mongoServer = await MongoMemoryServer.create();
+const getMongoUri = async () => {
+  if (mongoServer) {
+    return mongoServer.getUri();
   }
 
-  const mongoUri = mongoServer.getUri();
+  mongoServer = await MongoMemoryServer.create();
+  return mongoServer.getUri();
+};
 
-  // Simulate connection failure for testing
-  if (process.env.TEST_DB_CONNECTION === 'fail') {
-    return await mongoose
-      .connect('invalid-mongo-uri')
-      .catch(() => (connectionStatus = 'failed'));
-  }
-
-  await mongoose.connect(mongoUri).then(() => (connectionStatus = 'connected'));
+const startDatabase = async (mongoUri) => {
+  await mongoose
+    .connect(mongoUri)
+    .then(() => (connectionStatus = 'connected'))
+    .catch(() => (connectionStatus = 'failed'));
 };
 
 const stopDatabase = async () => {
@@ -34,4 +33,9 @@ const stopDatabase = async () => {
 
 const getConnectionStatus = () => connectionStatus;
 
-module.exports = { startDatabase, stopDatabase, getConnectionStatus };
+module.exports = {
+  getMongoUri,
+  startDatabase,
+  stopDatabase,
+  getConnectionStatus,
+};

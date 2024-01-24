@@ -1,5 +1,10 @@
 const express = require('express');
-const { startDatabase, stopDatabase, getConnectionStatus } = require('./db');
+const {
+  startDatabase,
+  stopDatabase,
+  getConnectionStatus,
+  getMongoUri,
+} = require('./db');
 const app = express();
 const port = process.env.PUBLIC_PORT ?? 8000;
 
@@ -13,7 +18,9 @@ app.get('/', (_, res) => {
 });
 
 const startServer = async () => {
-  await startDatabase();
+  const mongoUri = await getMongoUri();
+
+  await startDatabase(mongoUri);
 
   server = app.listen(port, () => {
     console.log(`🚀 server running on PORT: ${port}`);
