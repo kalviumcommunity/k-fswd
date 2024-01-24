@@ -16,10 +16,7 @@ const getMongoUri = async () => {
 };
 
 const startDatabase = async (mongoUri) => {
-  await mongoose
-    .connect(mongoUri)
-    .then(() => (connectionStatus = 'connected'))
-    .catch(() => (connectionStatus = 'failed'));
+  // your code here
 };
 
 const stopDatabase = async () => {
