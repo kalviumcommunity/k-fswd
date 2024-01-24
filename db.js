@@ -24,7 +24,8 @@ const stopDatabase = async () => {
     return;
   }
 
-  await mongoose.disconnect().then(() => (connectionStatus = 'disconnected'));
+  // your code here
+  // disconnect from mongoose and set the status as "closed"
   await mongoServer.stop();
 };
 
