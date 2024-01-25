@@ -1,0 +1,2 @@
+tabs: ['src/components/AwesomeComponent.jsx']
+terminals: ['yarn && yarn dev']
