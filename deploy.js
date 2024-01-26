@@ -3,11 +3,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to read index.html from dev folder
-function readFromDev() {
-  // your code here
-}
-
 // Function to write index.html to build folder
 function writeToBuild() {
   // your code here
