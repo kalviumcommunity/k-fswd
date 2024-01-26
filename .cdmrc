@@ -1,2 +1,2 @@
 tabs: ['deploy.js']
-terminals: ['yarn && yarn start', 'echo "run the deploy script"']
+terminals: ['yarn && yarn start']
