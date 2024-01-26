@@ -1,0 +1,2 @@
+tabs: ['deploy.js']
+terminals: ['yarn && yarn start']

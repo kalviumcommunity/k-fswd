@@ -1,5 +1,5 @@
 const express = require('express');
-const port = process.env.PUBLIC_PORT || 8000;
+const port = process.env.PUBLIC_PORT ?? 8000;
 
 const app = express();
 
