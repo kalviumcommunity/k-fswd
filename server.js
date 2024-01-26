@@ -7,7 +7,7 @@ app.use(express.static('build'));
 
 if (module === require.main) {
     app.listen(port, () => {
-      console.log(`App listening on port ${port}`);
+        console.log(`🚀 server running on PORT: ${port}`);
     });
 }
 
