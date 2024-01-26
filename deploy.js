@@ -7,10 +7,12 @@ const path = require('path');
 // Function to write index.html to build folder
 function writeToBuild() {
   // your code here
+
 }
 
-// Uncomment the following lines to test your code
-writeToBuild();
+if (module === require.main) {
+  writeToBuild();
+}
 
 module.exports = {
   writeToBuild,
