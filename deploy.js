@@ -12,6 +12,5 @@ function writeToBuild() {
 // writeToBuild();
 
 module.exports = {
-  readFromDev,
   writeToBuild,
 };
