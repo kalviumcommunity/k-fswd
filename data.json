@@ -1,0 +1,15 @@
+[
+  {
+    "squad": "<squad_number>",
+    "tagline": "<a tagline for your squad>",
+    "members": [
+      {
+        "email": "<email>",
+        "name": "<name>",
+        "role": "<role>", // should be one of: "mentor", "student"
+        "github": "<github username>",
+      }
+      // ...
+    ]
+  }
+]
