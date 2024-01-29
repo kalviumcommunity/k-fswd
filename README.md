@@ -11,8 +11,11 @@ You should have a basic understanding of JavaScript, React, and familiarity with
 0. **Start the server**: Run the following command in your terminal to start the server. This will allow you to make requests to the API.
 
    ```bash
-   npm run dev:server
+   yarn dev:server
    ```
+
+   This will start a server on port 1338. 
+   You can access it via `http://localhost:1338/`.
 
 1. **Create a Submit Method**: Write a method that makes a POST request to the API with the user's input when a submit button is clicked.
 
