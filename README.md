@@ -19,6 +19,11 @@
     ```
     import data from './data.json';
     ```
+
+    Update the data.json file with your own data.
+
+    Make sure you move the data.json file into the src folder of your project.
+
 3. 🛠️ Create a new Component:  Design a card component that can display object data.
    ```jsx
    function UserCard(props) {
