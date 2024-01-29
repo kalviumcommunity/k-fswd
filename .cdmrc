@@ -1,0 +1,2 @@
+tabs: ['./src/DataLoader.jsx']
+terminals: ['yarn && yarn dev']
