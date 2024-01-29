@@ -1,2 +1,2 @@
-tabs: ['./src/App.jsx', './server/db.json']
+tabs: ['./src/App.jsx']
 terminals: ['yarn']
