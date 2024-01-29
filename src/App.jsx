@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [data, setData] = useState([]);
 
   // Fetch the data from the API
-  // The API is available at `http://localhost:1338/doors`
+	// The API is available at `https://jsonplaceholder.typicode.com/posts`
 
   return (
     <>
