@@ -1,2 +1,2 @@
-tabs: ['UserInput.jsx']
+tabs: ['/src/UserInput.jsx']
 terminals: ['yarn']
