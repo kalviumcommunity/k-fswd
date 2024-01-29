@@ -1,8 +1,20 @@
-# React + Vite
+# Lab Exercise: Create a Component Which Takes User Input 📝
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectives 🎯
+In this task, we aim to build a React component that captures and handles user input. This will enhance your understanding of state management and event handling in React.
 
-Currently, two official plugins are available:
+## Prerequisites 🧐
+A basic understanding of JavaScript and React is required for this task.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Steps 🚀
+
+1. **Initialize State**: Inside your 'UserInput' component, initialize a state variable to store the user's input.
+
+2. **Create an Input Field**: Add an HTML input field in the component's render method.
+
+3. **Handle Input Change**: Write a method that updates the state with the user's input every time it changes. Attach this method to the input field's `onChange` event.
+
+4. **Display User Input**: Optionally, display the user's input somewhere in your component to verify it's being captured correctly.
+
+## Outcome 🏁
+By the end of this task, you will have a functional React component that can take, handle, and display user input. This is a crucial skill in building interactive web applications.
