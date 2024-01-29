@@ -1,2 +1,2 @@
-tabs: ['./src/DataLoader.jsx']
+tabs: ['./src/App.jsx']
 terminals: ['yarn && yarn dev']
