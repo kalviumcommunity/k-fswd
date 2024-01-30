@@ -1,2 +1,2 @@
 tabs: ['./src/DataLoader.jsx']
-terminals: ['yarn && yarn dev']
+terminals: ['yarn && yarn dev', 'nodemon server/app.js']
