@@ -1,4 +1,4 @@
-import DisplayData from "./DisplayData";
+import DisplayData from "./components/DisplayData";
 
 function App() {
   return <DisplayData />;
