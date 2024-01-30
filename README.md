@@ -15,7 +15,7 @@
 
 3. **Develop the Validation Function**: Write a function that uses the Joi schema to validate the input:
 
-			```json
+			```
 			{
 			 "name": "<your name>",
 			 "squad": "<your squad>",
