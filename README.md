@@ -10,11 +10,11 @@ Familiarity with JavaScript, HTML/CSS, and a basic understanding of React or a s
 
 1. **Implement Loading Indicator**: Add a loading indicator, such as a spinner or progress bar, that activates when an action is in progress (like an API call). This indicator should be visible until the action is complete.
 
-2. **Integrate API Calls**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
+2. **Call JSONPlaceholder API**: Implement a function to make API calls to [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts) (or a similar service) to fetch data. 
 
 3. **Manage UI States**: Introduce state management to control the visibility of the loading indicator and toast notifications based on the API call's success or failure.
 
-4. **Add Toast Notifications**: Implement toast notifications for success and error messages. These should be triggered after the API response is received.
+4. **Add Toast Notifications**: Implement toast notifications for success and error messages. These should be triggered after the API response is received. Explore and select a suitable `NPM` package for toast notifications. Install it using `npm` or `yarn`.
 
 5. **Error Handling**: Ensure your application handles errors gracefully, displaying a relevant message to the user through a toast notification.
 
