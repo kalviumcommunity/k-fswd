@@ -15,14 +15,15 @@
 
 3. **Develop the Validation Function**: Write a function that uses the Joi schema to validate the input:
 
-			```
-			{
-			 "name": "<your name>",
-			 "squad": "<your squad>",
-			 "dob": "<your dob>",
-			 "github": "<your github>"
-			}
-			
+	```json
+	{
+		"name": "<your name>",
+		"squad": "<your squad>",
+		"dob": "<your dob>",
+		"github": "<your github>"
+	}
+	```
+
 4. **Handle Validation Results**: Modify the function to return `true` if the input is valid, and `false` otherwise.
 
 5. **Test Your Function**: Create several test inputs to ensure the function accurately validates data.

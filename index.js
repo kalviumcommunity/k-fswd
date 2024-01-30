@@ -1,14 +1,15 @@
-
-
-function validateUserInput(input){
-    // your code here
+function validateUserInput(input) {
+  // your code here
 }
 
 const input = {
- 	 "name": "<your name>",
- 	 "squad": "<your squad>",
- 	 "dob": "<your dob>",
- 	 "github": "<your github>"
- }
+  name: '<your name>',
+  squad: '<your squad>',
+  dob: '<your dob>',
+  github: '<your github>',
+};
 
-console.log(validateUserInput(input))
+const result = validateUserInput(input);
+console.log(result);
+
+module.exports = validateUserInput;
