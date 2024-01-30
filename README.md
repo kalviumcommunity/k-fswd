@@ -1,13 +1,14 @@
 # Lab Exercise: Fetch from API and Show Loading State🔄
 
-## Objectives 🎯
+## 🎯 Objectives
+
 To learn how to fetch data from an API in React and effectively manage UI states, including displaying a loading indicator while data is being fetched.
 
-## Prerequisites 🧩
+## 🧩 Prerequisites
+
 Basic knowledge of React, including state management, and familiarity with JavaScript for making API requests.
 
-## Steps 📝
-
+## 📝 Steps 
 
 1. **Create a Data-Fetching Component**: Develop a React component named `DataLoader`. You can choose either a functional component with hooks or a class-based approach.
 
@@ -23,5 +24,6 @@ Basic knowledge of React, including state management, and familiarity with JavaS
 
 7. **Test the Component**: Ensure that your component correctly displays the loading state during data fetch and renders the data once it's fetched.
 
-## Outcome 🏁
+## 🏁 Outcome
+
 By the end of this exercise, you will have a React component capable of fetching data from an API, managing loading states, and displaying fetched data, enhancing your full-stack development skills. 🌟

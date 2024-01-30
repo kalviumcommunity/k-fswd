@@ -1,4 +1,4 @@
-import DataLoader from "./DataLoader";
+import DataLoader from "./components/DataLoader";
 
 function App() {
   return <DataLoader />;
