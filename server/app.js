@@ -3,9 +3,19 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 
+const loadData = () => {
+  try {
+    const dbPath = path.resolve(__dirname, 'db.json');
+    const dataBuffer = fs.readFileSync(dbPath);
+    const dataJSON = dataBuffer.toString();
+    return JSON.parse(dataJSON);
+  } catch (e) {
+    return [];
+  }
+};
+
 // Read the initial state from db.json
-const dbPath = path.resolve(__dirname, 'db.json');
-let doorsData = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+let doorsData = loadData();
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
@@ -13,7 +23,7 @@ const server = http.createServer((req, res) => {
   // Check if the request is for the /doors route or /doors/:id
   const urlRegex = /^\/doors\/[a-zA-Z0-9]+$/;
 
-  if (urlRegex.test(parsedUrl.pathname)) {
+  if (!urlRegex.test(parsedUrl.pathname)) {
     // Handle other routes
     res.writeHead(404, { 'Content-Type': 'text/json' });
     res.end('Not Found');
@@ -22,6 +32,21 @@ const server = http.createServer((req, res) => {
 
   // Handle CRUD operations
   if (req.method === 'GET') {
+    // if the request is for /doors/:id
+    if (parsedUrl.pathname !== '/doors') {
+      const doorId = parsedUrl.pathname.split('/')[2];
+      const door = doorsData.find((door) => door.id === doorId);
+
+      if (door) {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(door));
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Door not found');
+      }
+      return;
+    }
+
     // Read operation
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(doorsData));
