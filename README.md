@@ -1,12 +1,12 @@
 # Lab Exercise: Implement Delete API with Loading and Toast Notifications 🔄🍞
 
-## Objectives 🎯
+## 🎯 Objectives
 To understand the implementation of a Delete API in a full-stack application, focusing on showing a loading state during the API call and toast notifications for success or error outcomes.
 
-## Prerequisites 🧩
+## 🧩 Prerequisites
 Familiarity with RESTful APIs, basic knowledge of front-end and back-end development, and understanding of state management in UI components.
 
-## Steps 📝
+## 📝 Steps
 
 0. **Select a Suitable API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
 
@@ -24,5 +24,6 @@ Familiarity with RESTful APIs, basic knowledge of front-end and back-end develop
 
 7. **Testing the Implementation**: Test your application to ensure that the delete functionality works as expected, with proper loading and toast notifications.
 
-## Outcome 🏁
+## 🏁 Outcome
+
 Upon completing this exercise, you'll have enhanced your full-stack development skills by integrating a Delete API with a responsive UI that manages loading states and provides user feedback through toast notifications. 🌟

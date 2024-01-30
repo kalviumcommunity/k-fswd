@@ -1,11 +1,6 @@
-
 function App() {
   // your code here
-  return (
-    <>
-      
-    </>
-  )
+  return null;
 }
 
-export default App
+export default App;
