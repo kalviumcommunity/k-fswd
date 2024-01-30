@@ -12,17 +12,15 @@ Familiarity with Node.js and basic understanding of user roles in web applicatio
 
 1. Install JOI in your project by running `npm install joi` in the terminal.
 
-2. In your request handling module (e.g., `handleRequest.js`), import JOI.
+2. Identify the user's role from the request data (e.g., `req.body.role`).
 
-3. Identify the user's role from the request data (e.g., `req.body.role`).
+3. Construct a JOI validation logic that changes based on the identified role. For example, use `Joi.string().valid('admin', 'user')` to validate the role field, and then conditionally allow or deny specific fields in the data object based on this role.
 
-4. Construct a JOI validation logic that changes based on the identified role. For example, use `Joi.string().valid('admin', 'user')` to validate the role field, and then conditionally allow or deny specific fields in the data object based on this role.
+4. Apply this dynamic JOI validation within your request handling function to validate incoming data according to the user's role.
 
-5. Apply this dynamic JOI validation within your request handling function to validate incoming data according to the user's role.
+5. Test the validation by sending requests with different role data using  [Bruno](https://www.usebruno.com/).
 
-6. Test the validation by sending requests with different role data using  [Bruno](https://www.usebruno.com/).
-
-7. Handle validation errors gracefully, returning meaningful error messages to the client.
+6. Handle validation errors gracefully, returning meaningful error messages to the client.
 
 ## 🎁 Outcome
 
