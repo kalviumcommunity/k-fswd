@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
   // Check if the request is for the /doors route or /doors/:id
   const urlRegex = /^\/doors\/[a-zA-Z0-9]+$/;
 
-  if (!urlRegex.test(parsedUrl.pathname)) {
+  if (!urlRegex.test(parsedUrl.pathname) && parsedUrl.pathname !== '/doors') {
     // Handle other routes
     res.writeHead(404, { 'Content-Type': 'text/json' });
     res.end('Not Found');

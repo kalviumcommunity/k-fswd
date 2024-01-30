@@ -1,2 +1,2 @@
 tabs: ['./src/App.jsx']
-terminals: ['yarn']
+terminals: ['yarn', 'nodemon server/app.js']
