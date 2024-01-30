@@ -1,2 +1,2 @@
 tabs: ['./src/UserInput.jsx', './server/db.json']
-terminals: ['yarn']
+terminals: ['yarn && yarn dev', 'nodemon ./server/app.js']
