@@ -11,7 +11,7 @@ Basic knowledge of React, including state management, and familiarity with JavaS
 
 1. **Create a Data-Fetching Component**: Develop a React component named `DataLoader`. You can choose either a functional component with hooks or a class-based approach.
 
-2. **Select a Suitable API**: Choose a simple API for this exercise. This could be any free, public API like JSONPlaceholder.
+2. **Select a API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
 
 3. **Implement Data Fetching Logic**: In your `DataLoader` component, write the logic to fetch data from the API. Use the `useEffect` hook for functional components.
 
