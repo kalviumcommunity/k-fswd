@@ -10,7 +10,7 @@ Familiarity with JavaScript, HTML/CSS, and a basic understanding of React or a s
 
 1. **Implement Loading Indicator**: Add a loading indicator, such as a spinner or progress bar, that activates when an action is in progress (like an API call). This indicator should be visible until the action is complete.
 
-2. **Integrate API Calls**: Set up API calls for your application. These can be requests to a real server or mock requests using tools like Postman or Axios.
+2. **Integrate API Calls**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
 
 3. **Manage UI States**: Introduce state management to control the visibility of the loading indicator and toast notifications based on the API call's success or failure.
 
