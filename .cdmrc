@@ -1,2 +1,2 @@
 tabs: ['./src/components/DisplayData.jsx']
-terminals: ['yarn && yarn dev']
+terminals: ['yarn']
