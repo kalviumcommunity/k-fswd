@@ -1,0 +1,2 @@
+tabs: ['server.js']
+terminals: ['yarn && yarn start']
