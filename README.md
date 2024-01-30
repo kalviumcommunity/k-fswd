@@ -10,11 +10,9 @@ A solid grasp of React fundamentals and familiarity with making API requests usi
 
 ## 📝 Steps
 
-1. **Initialize React Project**: Begin by creating a new React project using Create React App. This will be the foundation for your lab exercise.
+1. **Create a Component for Data Fetching**: Develop a new React component, let's name it `DataDisplay`. Decide if it will be a functional component using hooks or a class-based component.
 
-2. **Create a Component for Data Fetching**: Develop a new React component, let's name it `DataDisplay`. Decide if it will be a functional component using hooks or a class-based component.
-
-3. **Select an API for Data Retrieval**: Pick a straightforward API for this exercise. This could be a free API like JSONPlaceholder or any other that provides test data without requiring authentication.
+2. **Select an API for Data Retrieval**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a URL indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
 
 4. **Implement API Data Fetching**: In your `DataDisplay` component, write a function to fetch data from the selected API. Use the `useEffect` hook for functional components.
 
