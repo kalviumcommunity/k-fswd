@@ -8,7 +8,7 @@ Familiarity with RESTful APIs, basic knowledge of front-end and back-end develop
 
 ## Steps 📝
 
-0. **Select a Suitable API**: Choose a simple API for this exercise. This could be any free, public API like JSONPlaceholder.
+0. **Select a Suitable API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
 
 1. **Create a Front-End Function**: In your front-end application, write a function to call the Delete API. This will be in a React component.
 
