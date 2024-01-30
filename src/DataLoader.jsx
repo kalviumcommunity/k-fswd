@@ -1,12 +1,6 @@
-import React from 'react';
-
 const DataLoader = () => {
     // your code here
-    return (
-        <div>
-            
-        </div>
-    );
+    return null;
 }
 
 export default DataLoader;
