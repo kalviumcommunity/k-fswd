@@ -1,12 +1,14 @@
 # Lab Exercise: Get from API and Render in React 🚀
 
-## Objectives 🎯
+## 🎯 Objectives
+
 To master the process of fetching data from an API in React and dynamically rendering that data in a component.
 
-## Prerequisites 🧩
+## 🧩 Prerequisites
+
 A solid grasp of React fundamentals and familiarity with making API requests using JavaScript.
 
-## Steps 📝
+## 📝 Steps
 
 1. **Initialize React Project**: Begin by creating a new React project using Create React App. This will be the foundation for your lab exercise.
 
@@ -20,5 +22,6 @@ A solid grasp of React fundamentals and familiarity with making API requests usi
 
 6. **Render the Data**: Once the data is fetched, render it in your component.
 
-## Outcome 🏁
+## 🏁 Outcome
+
 Completion of this lab exercise will enhance your skills in integrating API data with React components, demonstrating the ability to create dynamic, data-driven user interfaces in a full-stack development environment. 🌟
