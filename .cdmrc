@@ -1,1 +1,2 @@
 tabs: ['index.html', 'app.js']
+terminals: ['yarn && http-server --port 1337']
