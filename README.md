@@ -11,11 +11,13 @@
 
 ## 📝 Steps
 
+0. **Open the codedamn browser in new tab**: Click on the top right most icon to open browser in the new tab
+
 1. **Initialize the Cookie**: Start by checking if the count cookie exists. If not, create it with an initial value of `0`.
 
 2. **Read the Cookie**: Use JavaScript to read the current value of the count cookie on each page load.
 
-3. **Increment the Count**: Develop a function to increase the count each time a specific user action occurs (e.g., button click).
+3. **Increment the Count**: Develop a function to increase the count each time content loaded.
 
 4. **Update the Cookie**: After incrementing, update the cookie with the new count value.
 
