@@ -1,0 +1,2 @@
+tabs: ['index.html', 'app.js']
+terminals: ['npm i http-server -g &&  http-server --port 1337']
