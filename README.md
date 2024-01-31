@@ -15,11 +15,11 @@
 
 2. **Explore the Interface**: Access the module's interactive interface.
 
-3. **SHA256 Hash Analysis**: Examine the given SHA256 hash of a 3-digit number concatenated with 'kalvium'.
+3. **SHA256 Hash Analysis**: Examine the given SHA256 hash of a 3-digit number concatenated with 'happy'.
 
 4. **Strategic Guessing**: Apply reasoning and cryptographic understanding to deduce the original 3-digit number.
 
-5. **Enter Your Solution**: Input your 3-digit number guess considering 'kalvium' as the salt.
+5. **Enter Your Solution**: Input your 3-digit number guess considering 'happy' as the salt.
 
 6. **Verification Process**: Click 'Check' to see if your solution correctly decrypts the hash.
 
