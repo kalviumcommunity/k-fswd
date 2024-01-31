@@ -9,7 +9,7 @@ Basic knowledge of React, JavaScript and REST APIs.
 
 ## 🛠 Steps
 
-1. Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
+1. Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app` and add `/doors` in that `URL`.
    
 2. Create a new component called `DoorList` that will render a list of `Doors`. It should fetch the data from the API and render a list of `Door` components.
 
