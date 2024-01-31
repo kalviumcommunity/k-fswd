@@ -15,7 +15,7 @@ Basic knowledge of React, JavaScript and REST APIs.
 
 3. `Door` components will render `Door` name and it's status.
 
-4. Render the `PostList` component in the `App` component.
+4. Render the `DoorList` component in the `App` component.
 
 
 ## 🌟 Outcome
