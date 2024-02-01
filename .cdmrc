@@ -1,0 +1,2 @@
+tabs: ['jwt.js']
+terminals: ['yarn && yarn start']

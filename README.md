@@ -8,7 +8,7 @@
 
 ## Prerequisites 📚
 
-- Basic understanding of JWT and web security concepts.
+- Basic understanding of JWT and NodeJs.
 
 ## Steps 🛠
 
