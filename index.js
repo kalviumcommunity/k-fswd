@@ -1,6 +1,6 @@
 
-const encrypt = (payload) => {
-    // your code here
+const encrypt = (payload, secret) => {
+    // your code here and return token
     
 }
 
