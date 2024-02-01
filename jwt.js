@@ -2,7 +2,7 @@ const encrypt = (payload) => {
 
 }
 
-const decrypt = () => {
+const decrypt = (token) => {
 
 }
 
