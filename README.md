@@ -20,7 +20,9 @@
 
 4. **Implementing Decryption:** Learn how to safely decrypt the received JWT token to retrieve original data.
 
-5. **Best Practices:** Cover essential security practices to avoid common vulnerabilities.
+5. **Check Your Answer:** Check the console to see if your function works correctly. You will see `Success` in the console.
+
+6. **Iterate and Learn**: If unsuccessful, analyze your approach, learn from it, and try again!
 
 ## Outcome ✅
 
