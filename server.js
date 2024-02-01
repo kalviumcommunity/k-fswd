@@ -6,10 +6,10 @@ const port = process.env.PUBLIC_PORT ?? 8000;
 
 app.use(express.json());
 
-const payload = { best_ug_degree: "kalvium" };
+const payload = { best_ug_progrma: "kalvium" };
 
 const token = encrypt(payload);
-if (payload == decrypt(token)?.best_ug_degree) {
+if (payload.best_ug_progrma == decrypt(token)?.best_ug_progrma) {
     console.log("Success");
 }
 else {
