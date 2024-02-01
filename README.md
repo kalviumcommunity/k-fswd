@@ -14,15 +14,13 @@
 
 1. **Setup Your Project**: Install the `jsonwebtoken` package.
 
-2. **Generate a Secret Key**: Create a secret key to sign your tokens. Keep it secure and never expose it publicly.
+2. **Create a JWT**: Use the `jsonwebtoken` package to create a JWT, incorporating a payload and an expiry time.
 
-3. **Create a JWT**: Use the `jsonwebtoken` package to create a JWT, incorporating a payload with user details and an expiry time.
+3. **Set the Expiry**: Define the `expiresIn` option to specify the token's lifespan.
 
-4. **Set the Expiry**: Define the `expiresIn` option to specify the token's lifespan.
+4. **Handle Token Expiry**: Implement logic to handle expired tokens.
 
-5. **Handle Token Expiry**: Implement logic to handle expired tokens.
-
-6. **Testing**: Test your implementation by generating a token.
+5. **Testing**: Test your implementation by generating a token.
 
 ## Outcome 🎉
 
