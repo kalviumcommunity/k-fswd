@@ -12,15 +12,15 @@
 
 ## Steps 🛠
 
-- **Introduction to JWT:** Brief overview of JWT tokens and their importance in full-stack development.
+1. **Introduction to JWT:** Brief overview of JWT tokens and their importance in full-stack development.
 
-- **Encryption Methods:** Explore popular encryption algorithms suitable for JWT tokens.
+2. **Encryption Methods:** Explore popular encryption algorithms suitable for JWT tokens.
 
-- **Implementing Encryption:** Step-by-step guide on encrypting a JWT token before sending it over the network.
+3. **Implementing Encryption:** Step-by-step guide on encrypting a JWT token before sending it over the network.
 
-- **Implementing Decryption:** Learn how to safely decrypt the received JWT token to retrieve original data.
+4. **Implementing Decryption:** Learn how to safely decrypt the received JWT token to retrieve original data.
 
-- **Best Practices:** Cover essential security practices to avoid common vulnerabilities.
+5. **Best Practices:** Cover essential security practices to avoid common vulnerabilities.
 
 ## Outcome ✅
 
