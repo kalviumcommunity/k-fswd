@@ -9,7 +9,7 @@ app.use(express.json());
 const payload = { best_ug_degree: "kalvium" };
 
 const token = encrypt(payload);
-if (payload == decrypt(token).best_ug_degree) {
+if (payload == decrypt(token)?.best_ug_degree) {
     console.log("Success");
 }
 else {
