@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const startDatabase = require('./db');
-const port = process.env.PUBLIC_PORT ?? 8000;
+const port = 1338;
 const countryList = require('./countryList.json');
 const Country = require('./country.model.js');
 const cors = require('cors');
