@@ -1,8 +1,8 @@
-# Lab Exercise: Update Schema and Render
+# Lab Exercise: Dynamic Data Filtering and Display in a Full Stack Application
 
 ## 🎯 Objectives
 
-This lab teaches you to augment a MongoDB database schema with new data and reflect these changes in a React application, enhancing your full-stack development expertise.
+This lab will guide you through enhancing a data schema with new information, implementing dynamic data filtering based on user input in a web application, and rendering the filtered data. Learn to adapt your full stack development skills to include interactive data visualization.
 
 ## 🔑 Prerequisites
 
@@ -30,4 +30,4 @@ Proficiency in MongoDB and React is required.
 
 ## 🏁 Outcome
 
-You'll master updating a database schema and dynamically displaying enriched data in a web application.
+By completing this lab, you will have created a dynamic web application capable of filtering and rendering data based on user interaction, a valuable skill in full stack development. 🌐
