@@ -1,2 +1,2 @@
 tabs: ['./server/country.model.js', './server/countryList.json', './src/App.js']
-terminals: ['yarn && yarn ./server/start', 'yarn && yarn dev']
+terminals: ['cd server && yarn && yarn start', 'yarn && yarn dev']
