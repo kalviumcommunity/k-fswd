@@ -1,33 +1,30 @@
-# Lab Exercise: Update Schema and Render
+# Lab Exercise: Dynamic UI Filtering Project
 
-## 🎯 Objectives
+## 🎯 Objectives:
 
-This lab teaches you to augment a MongoDB database schema with new data and reflect these changes in a React application, enhancing your full-stack development expertise.
+- Integrate `is_island` and `colors_in_flag` dropdowns into an existing UI.
+- Display a filtered list of countries based on user selections.
 
-## 🔑 Prerequisites
+## 🔑 Prerequisites:
 
-Proficiency in MongoDB and React is required.
+- Basic understanding of HTML, CSS, JavaScript.
 
-## 🚀 Steps
+## 🛠 Steps:
 
-1. **Start the Server**: First run your server through the following commands:
+1. Begin with the provided JSON list of countries, including `name`, `country_code`, `is_island`, and `colors_in_flag` attributes.
 
-   ```
-     cd server
-     yarn
-     yarn start
-   ```
+2. Add two dropdowns to the UI:
+   - `is_island` dropdown with options: Yes, No.
+   - `colors_in_flag` dropdown allowing multiple selections of colors.
 
-2. **Update your MongoDB schema**: Add a 'continent' field to your countries collection.
+3. Implement JavaScript to handle dropdown selections and filter the country list accordingly.
+   - Use event listeners to detect changes in dropdown values.
+   - Filter the JSON list based on the selected criteria from both dropdowns.
 
-3. **Populate the 'continent' field**: For each country in your collection, fill in the correct continent.
+4. Dynamically update the UI to display only the countries that match the filter criteria. Ensure no page reload is necessary for displaying the filtered results.
 
-4. **Find the URL where the server is running**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a URL indicating where the server is currently running. The URL should end with .codedamn.app.
+5. Test the functionality across different devices and browsers for compatibility and responsiveness.
 
-5. **Adjust your React component**: Ensure your component now displays the continent information alongside each country.
+## 🎉 Outcome:
 
-6. **Review your application**: Check that your application correctly displays the updated country and continent data.
-
-## 🏁 Outcome
-
-You'll master updating a database schema and dynamically displaying enriched data in a web application.
+- A user-friendly interface that allows filtering countries by island status and flag colors.

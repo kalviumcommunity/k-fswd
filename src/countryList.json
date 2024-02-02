@@ -1,0 +1,199 @@
+[
+    {
+        "name": "Australia",
+        "country_code": "AU",
+        "is_island": true,
+        "colors_in_flag": [
+            "red",
+            "white",
+            "blue"
+        ]
+    },
+    {
+        "name": "Brazil",
+        "country_code": "BR",
+        "is_island": false,
+        "colors_in_flag": [
+            "green",
+            "yellow",
+            "blue",
+            "white"
+        ]
+    },
+    {
+        "name": "Canada",
+        "country_code": "CA",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white"
+        ]
+    },
+    {
+        "name": "Denmark",
+        "country_code": "DK",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white"
+        ]
+    },
+    {
+        "name": "Egypt",
+        "country_code": "EG",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white",
+            "black",
+            "gold"
+        ]
+    },
+    {
+        "name": "France",
+        "country_code": "FR",
+        "is_island": false,
+        "colors_in_flag": [
+            "blue",
+            "white",
+            "red"
+        ]
+    },
+    {
+        "name": "Germany",
+        "country_code": "DE",
+        "is_island": false,
+        "colors_in_flag": [
+            "black",
+            "red",
+            "yellow"
+        ]
+    },
+    {
+        "name": "India",
+        "country_code": "IN",
+        "is_island": false,
+        "colors_in_flag": [
+            "orange",
+            "white",
+            "green",
+            "blue"
+        ]
+    },
+    {
+        "name": "Japan",
+        "country_code": "JP",
+        "is_island": true,
+        "colors_in_flag": [
+            "red",
+            "white"
+        ]
+    },
+    {
+        "name": "Kenya",
+        "country_code": "KE",
+        "is_island": false,
+        "colors_in_flag": [
+            "black",
+            "red",
+            "green",
+            "white"
+        ]
+    },
+    {
+        "name": "Madagascar",
+        "country_code": "MG",
+        "is_island": true,
+        "colors_in_flag": [
+            "white",
+            "red",
+            "green"
+        ]
+    },
+    {
+        "name": "Netherlands",
+        "country_code": "NL",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white",
+            "blue"
+        ]
+    },
+    {
+        "name": "Oman",
+        "country_code": "OM",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white",
+            "green",
+            "red"
+        ]
+    },
+    {
+        "name": "Portugal",
+        "country_code": "PT",
+        "is_island": false,
+        "colors_in_flag": [
+            "green",
+            "red"
+        ]
+    },
+    {
+        "name": "Qatar",
+        "country_code": "QA",
+        "is_island": false,
+        "colors_in_flag": [
+            "white",
+            "maroon"
+        ]
+    },
+    {
+        "name": "Russia",
+        "country_code": "RU",
+        "is_island": false,
+        "colors_in_flag": [
+            "white",
+            "blue",
+            "red"
+        ]
+    },
+    {
+        "name": "Spain",
+        "country_code": "ES",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "yellow"
+        ]
+    },
+    {
+        "name": "Turkey",
+        "country_code": "TR",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "white"
+        ]
+    },
+    {
+        "name": "United Kingdom",
+        "country_code": "GB",
+        "is_island": true,
+        "colors_in_flag": [
+            "red",
+            "white",
+            "blue"
+        ]
+    },
+    {
+        "name": "Vietnam",
+        "country_code": "VN",
+        "is_island": false,
+        "colors_in_flag": [
+            "red",
+            "yellow"
+        ]
+    }
+]
