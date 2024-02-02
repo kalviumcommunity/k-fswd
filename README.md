@@ -10,13 +10,23 @@ Proficiency in MongoDB and React is required.
 
 ## 🚀 Steps
 
-1. **Update your MongoDB schema**: Add a 'continent' field to your countries collection.
+1. **Start the Server**: First run your server through the following commands:
 
-2. **Populate the 'continent' field**: For each country in your collection, fill in the correct continent.
+   ```
+     cd server
+     yarn
+     yarn start
+   ```
 
-3. **Adjust your React component**: Ensure your component now displays the continent information alongside each country.
+2. **Update your MongoDB schema**: Add a 'continent' field to your countries collection.
 
-4. **Review your application**: Check that your application correctly displays the updated country and continent data.
+3. **Populate the 'continent' field**: For each country in your collection, fill in the correct continent.
+
+4. **Find the URL where the server is running**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a URL indicating where the server is currently running. The URL should end with .codedamn.app.
+
+5. **Adjust your React component**: Ensure your component now displays the continent information alongside each country.
+
+6. **Review your application**: Check that your application correctly displays the updated country and continent data.
 
 ## 🏁 Outcome
 
