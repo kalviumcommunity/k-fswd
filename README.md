@@ -4,7 +4,7 @@
 To develop an understanding of how to implement UI feedback mechanisms in web applications, particularly by showing loading indicators and toast notifications for success and error messages.
 
 ## Prerequisites 🧩
-Familiarity with JavaScript, HTML/CSS, and a basic understanding of React or a similar front-end framework.
+Familiarity with JavaScript and basic understanding of React.
 
 ## Steps 📝
 
