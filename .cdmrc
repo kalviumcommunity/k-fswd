@@ -1,2 +1,2 @@
-tabs: ['./src/UpdateItem.jsx', './server/db.json']
+tabs: ['./src/components/UpdateItem.jsx', './server/db.json']
 terminals: ['yarn']
