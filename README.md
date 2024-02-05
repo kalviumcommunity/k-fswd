@@ -1,16 +1,19 @@
 # Lab Exercise: Create a Component Which Fetches an Existing Item and Updates It 📝🔄
 
-## Objectives 🎯
+## 🎯 Objectives
+
 In this task, we will create a React component that fetches an existing item from an API and allows the user to update it. This will help you understand CRUD operations and how to interact with APIs using React.
 
-## Prerequisites 🧐
+## 🧐 Prerequisites
+
 You should have a basic understanding of JavaScript, React, and familiarity with fetch API or axios for making HTTP requests.
 
-## Steps 🚀
+## 🚀 Steps
 
 1. **Initialize State**: Inside your 'UpdateItem' component, initialize state variables to store the existing item, the updated item, and any API responses.
 
 2. **Find an API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
+   > **Note**: If you are unable to find the `URL`, please reach out to your mentor.
 
 3. **Fetch Existing Item**: Write a method that makes a GET request to the API to fetch the existing item when the component mounts.
 
@@ -24,5 +27,6 @@ You should have a basic understanding of JavaScript, React, and familiarity with
 
 8. **Handle API Response**: Update the state with the API response and handle any errors that may occur during the request.
 
-## Outcome 🏁
+## 🏁 Outcome
+
 By the end of this task, you will have a functional React component that fetches an existing item, allows user input for updates, and sends the updates to an API. This is a crucial skill in creating dynamic and interactive web applications.
