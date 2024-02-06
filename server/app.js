@@ -5,8 +5,14 @@ const path = require('path');
 
 // repond function to write the response as a JSON
 const respond = (res, status, contentType, data) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, DELETE, OPTIONS'
+  );
   res.writeHead(status, { 'Content-Type': contentType });
-  res.end(JSON.stringify(data));
+  if (data) return res.end(JSON.stringify(data));
+  res.end();
 };
 
 const loadData = (key) => {
@@ -50,7 +56,9 @@ const getHandler = (req, res) => {
       return respond(res, 200, 'application/json', door);
     }
 
-    return respond(res, 404, 'text/json', { message: 'Door not found' });
+    return respond(res, 404, 'application/json', {
+      message: 'Door not found',
+    });
   }
 
   // Read operation
@@ -95,7 +103,9 @@ const putHandler = (req, res) => {
       return respond(res, 200, 'application/json', updatedDoorObj);
     }
 
-    return respond(res, 404, 'text/json', { message: 'Door not found' });
+    return respond(res, 404, 'application/json', {
+      message: 'Door not found',
+    });
   });
 };
 
@@ -111,7 +121,7 @@ const deleteHandler = (req, res) => {
     return respond(res, 200, 'application/json', deletedDoor);
   }
 
-  return respond(res, 404, 'text/json', { message: 'Door not found' });
+  return respond(res, 404, 'application/json', { message: 'Door not found' });
 };
 
 const server = http.createServer((req, res) => {
@@ -134,19 +144,24 @@ const server = http.createServer((req, res) => {
   // Handle CRUD operations using switch statement
   switch (req.method) {
     case 'GET':
-      getHandler(req, res);
-      break;
+      return getHandler(req, res);
+
     case 'POST':
-      postHandler(req, res);
-      break;
+      return postHandler(req, res);
+
     case 'PUT':
-      putHandler(req, res);
-      break;
+      return putHandler(req, res);
+
     case 'DELETE':
-      deleteHandler(req, res);
-      break;
+      return deleteHandler(req, res);
+
+    case 'OPTIONS':
+      return respond(res, 200, 'application/json');
+
     default:
-      return respond(res, 404, 'text/json', { message: 'Not Found' });
+      return respond(res, 404, 'application/json', {
+        message: 'Not Found',
+      });
   }
 });
 
