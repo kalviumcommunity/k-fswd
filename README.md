@@ -10,7 +10,8 @@ You should have a basic understanding of JavaScript, React, and familiarity with
 
 1. **Initialize State**: Inside your 'ItemList' component, initialize a state variable to store the list items and any API responses.
 
-2. **Find an API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
+2. **Find an API**: The `API_URI` is provided in the `src/App.jsx` file. You will use this URL to make requests to the API.
+    > Note: If you are unable to find the API_URI, please reach out to your mentor.
 
 3. **Fetch List Items**: Write a method that makes a GET request to the API to fetch the list items when the component mounts.
 
