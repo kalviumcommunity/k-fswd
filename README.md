@@ -10,7 +10,8 @@ Familiarity with JavaScript and basic understanding of React.
 
 1. **Implement Loading Indicator**: Add a loading indicator, such as a spinner or progress bar, that activates when an action is in progress (like an API call). This indicator should be visible until the action is complete.
 
-2. **Call JSONPlaceholder API**: Implement a function to make API calls to [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts) (or a similar service) to fetch data. 
+2. **Calling  API**: The `API_URI` is provided in the `src/App.jsx` file. You will use this URL to make requests to the API.
+   > Note: If you are unable to find the `API_URI`, please reach out to your mentor
 
 3. **Manage UI States**: Introduce state management to control the visibility of the loading indicator and toast notifications based on the API call's success or failure.
 
