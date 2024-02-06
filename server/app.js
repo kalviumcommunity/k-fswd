@@ -3,21 +3,124 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 
-const loadData = () => {
+// repond function to write the response as a JSON
+const respond = (res, status, contentType, data) => {
+  res.writeHead(status, { 'Content-Type': contentType });
+  res.end(JSON.stringify(data));
+};
+
+const loadData = (key) => {
   try {
     const dbPath = path.resolve(__dirname, 'db.json');
     const dataBuffer = fs.readFileSync(dbPath);
     const dataJSON = dataBuffer.toString();
-    return JSON.parse(dataJSON);
+    const data = JSON.parse(dataJSON);
+    return key ? data[key] : data;
   } catch (e) {
-    return [];
+    return {};
+  }
+};
+
+const saveData = (key, data) => {
+  try {
+    const dbPath = path.resolve(__dirname, 'db.json');
+    const existingData = loadData();
+    const newData = { ...existingData, [key]: data };
+    const dataJSON = JSON.stringify(newData, null, 2);
+    fs.writeFileSync(dbPath, dataJSON);
+    return data;
+  } catch (e) {
+    return {};
   }
 };
 
 // Read the initial state from db.json
-let doorsData = loadData();
+let doorsData = loadData('doors');
+
+// 'get' handler for the /doors route
+const getHandler = (req, res) => {
+  const parsedUrl = url.parse(req.url, true);
+
+  // if the request is for /doors/:id
+  if (parsedUrl.pathname !== '/doors') {
+    const doorId = parsedUrl.pathname.split('/')[2];
+    const door = doorsData.find((door) => door.id === doorId);
+
+    if (door) {
+      return respond(res, 200, 'application/json', door);
+    }
+
+    return respond(res, 404, 'text/json', { message: 'Door not found' });
+  }
+
+  // Read operation
+  return respond(res, 200, 'application/json', doorsData);
+};
+
+const postHandler = (req, res) => {
+  let newDoor = '';
+
+  req.on('data', (chunk) => {
+    newDoor += chunk;
+  });
+
+  req.on('end', () => {
+    let newDoorObj = JSON.parse(newDoor);
+    const id = doorsData.length + 1;
+    newDoorObj = { id: id.toString(), ...newDoorObj };
+    doorsData.push(newDoorObj);
+    saveData('doors', doorsData);
+
+    return respond(res, 201, 'application/json', newDoorObj);
+  });
+};
+
+const putHandler = (req, res) => {
+  const parsedUrl = url.parse(req.url, true);
+  let updatedDoor = '';
+
+  req.on('data', (chunk) => {
+    updatedDoor += chunk;
+  });
+
+  req.on('end', () => {
+    const doorId = parsedUrl.pathname.split('/')[2];
+    let updatedDoorObj = JSON.parse(updatedDoor);
+    const index = doorsData.findIndex((door) => door.id === doorId);
+
+    if (index !== -1) {
+      updatedDoorObj = { id: doorId, ...updatedDoorObj };
+      doorsData[index] = updatedDoorObj;
+      saveData('doors', doorsData);
+      return respond(res, 200, 'application/json', updatedDoorObj);
+    }
+
+    return respond(res, 404, 'text/json', { message: 'Door not found' });
+  });
+};
+
+const deleteHandler = (req, res) => {
+  const parsedUrl = url.parse(req.url, true);
+  const doorId = parsedUrl.pathname.split('/')[2];
+  const index = doorsData.findIndex((door) => door.id === doorId);
+
+  if (index !== -1) {
+    const deletedDoor = doorsData.splice(index, 1)[0];
+    saveData('doors', doorsData);
+
+    return respond(res, 200, 'application/json', deletedDoor);
+  }
+
+  return respond(res, 404, 'text/json', { message: 'Door not found' });
+};
 
 const server = http.createServer((req, res) => {
+  // CRUD operations
+  // GET /doors
+  // GET /doors/:id
+  // POST /doors
+  // PUT /doors/:id
+  // DELETE /doors/:id
   const parsedUrl = url.parse(req.url, true);
 
   // Check if the request is for the /doors route or /doors/:id
@@ -25,84 +128,25 @@ const server = http.createServer((req, res) => {
 
   if (!urlRegex.test(parsedUrl.pathname) && parsedUrl.pathname !== '/doors') {
     // Handle other routes
-    res.writeHead(404, { 'Content-Type': 'text/json' });
-    res.end('Not Found');
-    return;
+    return respond(res, 404, 'text/json', { message: 'Not Found' });
   }
 
-  // Handle CRUD operations
-  if (req.method === 'GET') {
-    // if the request is for /doors/:id
-    if (parsedUrl.pathname !== '/doors') {
-      const doorId = parsedUrl.pathname.split('/')[2];
-      const door = doorsData.doors.find((door) => door.id === doorId);
-
-      if (door) {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(door));
-      } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Door not found');
-      }
-      return;
-    }
-
-    // Read operation
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(doorsData.doors));
-  } else if (req.method === 'POST') {
-    // Create operation
-    let newDoor = '';
-
-    req.on('data', (chunk) => {
-      newDoor += chunk;
-    });
-
-    req.on('end', () => {
-      const newDoorObj = JSON.parse(newDoor);
-      doorsData.push(newDoorObj);
-      fs.writeFileSync('db.json', JSON.stringify(doorsData));
-      res.writeHead(201, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify(newDoorObj));
-    });
-  } else if (req.method === 'PUT') {
-    // Update operation
-    let updatedDoor = '';
-
-    req.on('data', (chunk) => {
-      updatedDoor += chunk;
-    });
-
-    req.on('end', () => {
-      const updatedDoorObj = JSON.parse(updatedDoor);
-      const index = doorsData.findIndex(
-        (door) => door.id === updatedDoorObj.id
-      );
-
-      if (index !== -1) {
-        doorsData[index] = updatedDoorObj;
-        fs.writeFileSync('db.json', JSON.stringify(doorsData));
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify(updatedDoorObj));
-      } else {
-        res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.end('Door not found');
-      }
-    });
-  } else if (req.method === 'DELETE') {
-    // Delete operation
-    const doorId = parsedUrl.query.id;
-    const index = doorsData.findIndex((door) => door.id === doorId);
-
-    if (index !== -1) {
-      const deletedDoor = doorsData.splice(index, 1)[0];
-      fs.writeFileSync('db.json', JSON.stringify(doorsData));
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(JSON.stringify(deletedDoor));
-    } else {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Door not found');
-    }
+  // Handle CRUD operations using switch statement
+  switch (req.method) {
+    case 'GET':
+      getHandler(req, res);
+      break;
+    case 'POST':
+      postHandler(req, res);
+      break;
+    case 'PUT':
+      putHandler(req, res);
+      break;
+    case 'DELETE':
+      deleteHandler(req, res);
+      break;
+    default:
+      return respond(res, 404, 'text/json', { message: 'Not Found' });
   }
 });
 
