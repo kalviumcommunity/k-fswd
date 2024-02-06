@@ -1,16 +1,16 @@
 # Lab Exercies: How to Encrypt and Decrypt a JWT Token
 
-## Objectives 🎯
+## 🎯 Objectives
 
 - Understand the process of JWT token encryption and decryption for secure data transmission.
 
 - Implement encryption and decryption in a full-stack environment to enhance application security.
 
-## Prerequisites 📚
+## 📚 Prerequisites
 
 - Basic understanding of JWT and NodeJs.
 
-## Steps 🛠
+## 🛠 Steps
 
 1. **Introduction to JWT:** Brief overview of JWT tokens and their importance in full-stack development.
 
@@ -24,6 +24,6 @@
 
 6. **Iterate and Learn**: If unsuccessful, analyze your approach, learn from it, and try again!
 
-## Outcome ✅
+## ✅ Outcome
 
 - Ability to securely handle JWT tokens in your full-stack projects.
