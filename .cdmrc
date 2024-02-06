@@ -1,2 +1,2 @@
-tabs: ['./src/App.jsx']
-terminals: ['yarn && yarn dev']
+tabs: ['./src/App.jsx', './server/db.json']
+terminals: ['yarn', 'yarn dev:server']

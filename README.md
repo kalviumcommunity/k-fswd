@@ -8,7 +8,8 @@ Familiarity with RESTful APIs, basic knowledge of front-end and back-end develop
 
 ## 📝 Steps
 
-0. **Select a Suitable API**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a `URL` indicating where the server is currently running. The `URL` should end with `.codedamn.app`.
+0. **Select a Suitable API**: The `API_URI` is provided in the `src/App.jsx` file. You will use this URL to make requests to the API.
+   > Note: If you are unable to find the `API_URI`, please reach out to your mentor.
 
 1. **Create a Front-End Function**: In your front-end application, write a function to call the Delete API. This will be in a React component.
 
@@ -16,7 +17,7 @@ Familiarity with RESTful APIs, basic knowledge of front-end and back-end develop
 
 3. **Call the Delete API**: Use the function created in step 2 to call the API. Make sure to handle the loading state appropriately before and after the call.
 
-4. **Toast Notifications**: Implement toast notifications to show the outcome of the API call. Use a success message for a successful deletion and an error message for a failure.
+4. **Toast Notifications**: Implement toast notifications for success and error messages. These should be triggered after the API response is received. Explore and select a suitable `NPM` package for toast notifications. Install it using `npm` or `yarn`.
 
 5. **State Update on Success/Error**: Update the UI state based on the response. Remove the loading indicator and display the appropriate toast notification.
 
