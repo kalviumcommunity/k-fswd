@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PUBLIC_PORT ?? 8000;
+const port = process.env.SECONDARY_PUBLIC_PORT ?? 8000;
 
 const countryList = require('./countryList.json');
 const Country = require('./country.model.js');
