@@ -1,2 +1,2 @@
-tabs: ['./src/ItemList.jsx', './server/db.json']
-terminals: ['yarn']
+tabs: ['./src/component/ItemList.jsx', './server/db.json']
+terminals: ['yarn', 'yarn dev:server']
