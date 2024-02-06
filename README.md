@@ -11,9 +11,8 @@
 
 ## Steps 📝
 
-### 1. Install Docker Compose
-- **Linux:** Run the installation command in your terminal.
-- **Windows & Mac:** Docker Compose is included with Docker Desktop.
+### 1. Install Docker Compose: 
+- Begin by installing [Docker Compose](https://docs.docker.com/compose/install/) on your machine to set up your development environment.
 
 ### 2. Understand `docker-compose.yml`
 The `docker-compose.yml` file is where you define your Docker application's services, networks, and volumes. Here's a quick overview of its key components:
@@ -42,23 +41,15 @@ The `docker-compose.yml` file is where you define your Docker application's serv
 version: '3.8'
 services:
   web:
-    image: nginx:alpine
+    build: ./server // use the docker file which you have build in previous plu 
     ports:
-      - "80:80"
-    volumes:
-      - ./html:/usr/share/nginx/html
-  db:
-    image: postgres:alpine
+      - 3000:3000
     environment:
-      POSTGRES_PASSWORD: example
-    volumes:
-      - db-data:/var/lib/postgresql/data
-
-volumes:
-  db-data:
-
-networks:
-  default:
+      - DB_URL: mongoDB://db/dbname
+  db:
+    image: mongo:4.0-xenial
+    ports:
+        - 27017:2707
 ```
 
 ## Outcome 🌟
