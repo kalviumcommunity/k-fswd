@@ -1,2 +1,2 @@
-tabs: ['index.html', 'app.js']
+playground-view: terminal-browser
 terminals: ['static-server -p 1337 --no-cache']
