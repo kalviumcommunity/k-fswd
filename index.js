@@ -1,7 +1,5 @@
-
 const encrypt = (payload, secret) => {
-    // your code here and return token
-    
-}
+  // your code here and return token
+};
 
-module.exports = encrypt
+module.exports = encrypt;

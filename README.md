@@ -1,16 +1,16 @@
 # Lab Exercise: How to Create a JWT with Expiry 🕒
 
-## Objectives 🎯
+## 🎯 Objectives
 
 - Learn to generate a JWT (JSON Web Token) with an expiration time to enhance the security of your full-stack applications.
 
 - Understand the importance of expiry in JWTs for session management and user authentication.
 
-## Prerequisites 📚
+## 📚 Prerequisites
 
 - Basic knowledge of Node.js and Express framework.
 
-## Steps 🛠️
+## 🛠️ Steps
 
 1. **Setup Your Project**: Install the `jsonwebtoken` package.
 
@@ -22,6 +22,6 @@
 
 5. **Testing**: Test your implementation by generating a token.
 
-## Outcome 🎉
+## 🎉 Outcome
 
 - You'll be able to create secure JWTs with expiry, enhancing the security and user experience of your full-stack applications.
