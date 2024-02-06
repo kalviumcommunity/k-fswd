@@ -11,8 +11,6 @@
 
 ## 📝 Steps
 
-0. **Open the codedamn browser in new tab**: Click on the top right most icon to open browser in the new tab
-
 1. **Initialize the Cookie**: Start by checking if the count cookie exists. If not, create it with an initial value of `0`.
 
 2. **Read the Cookie**: Use JavaScript to read the current value of the count cookie on each page load.
