@@ -1,4 +1,4 @@
-# Integrating Firebase Authentication
+# Lab Exercise: Integrating Firebase Authentication
 
 Welcome to this hands-on guide to adding Firebase authentication to your React project! This README is crafted to give you a straightforward and detailed roadmap for incorporating Firebase into your React application for authentication. Follow this guide to elevate your full-stack development expertise through hands-on practice.
 
