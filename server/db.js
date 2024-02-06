@@ -1,11 +1,26 @@
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
-const startDatabase = async () => {
-    const mongoServer = await MongoMemoryServer.create();
-    await mongoose.connect(mongoServer.getUri())
-        .then(() => console.log("DB Connected"))
-        .catch((err) => console.log(err));
-}
+// A singleton to ensure we only start the database once
+// assign the MongoMemoryServer instance to mongoServer
+let mongoServer;
 
-module.exports = startDatabase;
+const startDatabase = async () => {
+  if (!mongoServer) {
+    mongoServer = await MongoMemoryServer.create();
+  }
+  const mongoUri = mongoServer.getUri();
+  await mongoose.connect(mongoUri);
+  console.log('📦 database connected!');
+};
+
+const stopDatabase = async () => {
+  if (!mongoServer) {
+    return;
+  }
+  await mongoose.disconnect();
+  await mongoServer.stop();
+  console.log('📦 database closed!');
+};
+
+module.exports = { startDatabase, stopDatabase };

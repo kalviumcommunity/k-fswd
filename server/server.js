@@ -1,33 +1,42 @@
 const express = require('express');
 const app = express();
-const startDatabase = require('./db');
-const port = 1338;
+const port = process.env.PUBLIC_PORT ?? 8000;
+
 const countryList = require('./countryList.json');
 const Country = require('./country.model.js');
-const cors = require('cors');
-
-app.use(cors());
+const startDatabase = require('./db');
 
 const insertIntoDB = async () => {
-    await Country.insertMany(countryList);
-}
+  await Country.insertMany(countryList);
+};
 
 app.get('/api/country', async (req, res) => {
-    try {
-        const countries = await Country.find({});
-        return res.status(200).json({list: countries});
-    }
-    catch (err) {
-        return res.status(500).json({ error: err });
-    }
-})
+  try {
+    const countries = await Country.find({});
+    return res.status(200).json({ list: countries });
+  } catch (err) {
+    return res.status(500).json({ error: err });
+  }
+});
+
+process.on('SIGINT', async () => {
+  await stopDatabase();
+  process.exit(0);
+});
+
+process.on('SIGTERM', async () => {
+  await stopDatabase();
+  process.exit(0);
+});
 
 if (require.main === module) {
-    app.listen(port, async () => {
-        await startDatabase();
-        await insertIntoDB();
-        console.log(`🚀 server running on PORT: ${port}`);
-    });
+  app.listen(port, async () => {
+    await startDatabase();
+    await insertIntoDB();
+
+    console.log(`🚀 server running on PORT: ${port}`);
+  });
 }
+
 
 module.exports = app;
