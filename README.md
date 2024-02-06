@@ -11,7 +11,6 @@ Proficiency in MongoDB and React is required.
 ## 🚀 Steps
 
 1. **Start the Server**: First run your server through the following commands:
-
    ```
      cd server
      yarn
@@ -22,7 +21,8 @@ Proficiency in MongoDB and React is required.
 
 3. **Populate the 'continent' field**: For each country in your collection, fill in the correct continent.
 
-4. **Find the URL where the server is running**: Please navigate to the settings icon located in the navigation sidebar. Within the settings, you will find a URL indicating where the server is currently running. The URL should end with .codedamn.app.
+4. **Find the URL where the server is running**: The API_URI is provided in the src/App.jsx file. You will use this URL to make requests to the API.
+    > Note: If you are unable to find the API_URI, please reach out to your mentor.
 
 5. **Implement a continent dropdown in the UI**: Add a dropdown menu to your React frontend that lists all available continents.
 
