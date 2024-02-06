@@ -1,17 +1,15 @@
-const SECRET = 'Kalvium'
+const SECRET = 'expert';
 
 const encryptHS256 = (payload) => {
-    // your code here
+  // your code here
 
-
-    return token;
-}
+  return token;
+};
 
 const encryptRS256 = (payload) => {
-    // your code here
+  // your code here
 
+  return token;
+};
 
-    return token;
-}
-
-module.exports = { encryptHS256, encryptRS256 };
+module.exports = { SECRET, encryptHS256, encryptRS256 };
