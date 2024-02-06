@@ -35,7 +35,7 @@ const server = http.createServer((req, res) => {
     // if the request is for /doors/:id
     if (parsedUrl.pathname !== '/doors') {
       const doorId = parsedUrl.pathname.split('/')[2];
-      const door = doorsData.find((door) => door.id === doorId);
+      const door = doorsData.doors.find((door) => door.id === doorId);
 
       if (door) {
         res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
 
     // Read operation
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify(doorsData));
+    res.end(JSON.stringify(doorsData.doors));
   } else if (req.method === 'POST') {
     // Create operation
     let newDoor = '';
