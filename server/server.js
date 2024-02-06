@@ -4,7 +4,7 @@ const port = process.env.PUBLIC_PORT ?? 8000;
 
 const countryList = require('./countryList.json');
 const Country = require('./country.model.js');
-const startDatabase = require('./db');
+const { startDatabase, stopDatabase } = require('./db');
 
 const insertIntoDB = async () => {
   await Country.insertMany(countryList);
@@ -25,7 +25,7 @@ process.on('SIGINT', async () => {
 });
 
 process.on('SIGTERM', async () => {
-  await stopDatabase();
+  await startDatabase.stopDatabase();
   process.exit(0);
 });
 
@@ -37,6 +37,5 @@ if (require.main === module) {
     console.log(`🚀 server running on PORT: ${port}`);
   });
 }
-
 
 module.exports = app;
