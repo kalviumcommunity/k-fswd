@@ -1,12 +1,7 @@
 import countryList from './countryList.json';
 
 function App() {
-  
-  return (
-    <>
-      
-    </>
-  );
+  return null;
 }
 
 export default App;
