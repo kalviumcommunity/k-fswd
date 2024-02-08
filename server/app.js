@@ -1,19 +1,10 @@
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
-const path = require('path');
+const path = require('node:path');
+const fs = require('node:fs');
+const express = require('express');
 
-// repond function to write the response as a JSON
-const respond = (res, status, contentType, data) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, DELETE, OPTIONS'
-  );
-  res.writeHead(status, { 'Content-Type': contentType });
-  if (data) return res.end(JSON.stringify(data));
-  res.end();
-};
+const PORT = process.env.PUBLIC_PORT || 8000;
+
+const app = express();
 
 const loadData = (key) => {
   try {
@@ -40,133 +31,59 @@ const saveData = (key, data) => {
   }
 };
 
-// Read the initial state from db.json
-let doorsData = loadData('doors');
+app.use(express.json());
 
-// 'get' handler for the /doors route
-const getHandler = (req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-
-  // if the request is for /doors/:id
-  if (parsedUrl.pathname !== '/doors') {
-    const doorId = parsedUrl.pathname.split('/')[2];
-    const door = doorsData.find((door) => door.id === doorId);
-
-    if (door) {
-      return respond(res, 200, 'application/json', door);
-    }
-
-    return respond(res, 404, 'application/json', {
-      message: 'Door not found',
-    });
-  }
-
-  // Read operation
-  return respond(res, 200, 'application/json', doorsData);
-};
-
-const postHandler = (req, res) => {
-  let newDoor = '';
-
-  req.on('data', (chunk) => {
-    newDoor += chunk;
-  });
-
-  req.on('end', () => {
-    let newDoorObj = JSON.parse(newDoor);
-    const id = doorsData.length + 1;
-    newDoorObj = { id: id.toString(), ...newDoorObj };
-    doorsData.push(newDoorObj);
-    saveData('doors', doorsData);
-
-    return respond(res, 201, 'application/json', newDoorObj);
-  });
-};
-
-const putHandler = (req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  let updatedDoor = '';
-
-  req.on('data', (chunk) => {
-    updatedDoor += chunk;
-  });
-
-  req.on('end', () => {
-    const doorId = parsedUrl.pathname.split('/')[2];
-    let updatedDoorObj = JSON.parse(updatedDoor);
-    const index = doorsData.findIndex((door) => door.id === doorId);
-
-    if (index !== -1) {
-      updatedDoorObj = { id: doorId, ...updatedDoorObj };
-      doorsData[index] = updatedDoorObj;
-      saveData('doors', doorsData);
-      return respond(res, 200, 'application/json', updatedDoorObj);
-    }
-
-    return respond(res, 404, 'application/json', {
-      message: 'Door not found',
-    });
-  });
-};
-
-const deleteHandler = (req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-  const doorId = parsedUrl.pathname.split('/')[2];
-  const index = doorsData.findIndex((door) => door.id === doorId);
-
-  if (index !== -1) {
-    const deletedDoor = doorsData.splice(index, 1)[0];
-    saveData('doors', doorsData);
-
-    return respond(res, 200, 'application/json', deletedDoor);
-  }
-
-  return respond(res, 404, 'application/json', { message: 'Door not found' });
-};
-
-const server = http.createServer((req, res) => {
-  // CRUD operations
-  // GET /doors
-  // GET /doors/:id
-  // POST /doors
-  // PUT /doors/:id
-  // DELETE /doors/:id
-  const parsedUrl = url.parse(req.url, true);
-
-  // Check if the request is for the /doors route or /doors/:id
-  const urlRegex = /^\/doors\/[a-zA-Z0-9]+$/;
-
-  if (!urlRegex.test(parsedUrl.pathname) && parsedUrl.pathname !== '/doors') {
-    // Handle other routes
-    return respond(res, 404, 'text/json', { message: 'Not Found' });
-  }
-
-  // Handle CRUD operations using switch statement
-  switch (req.method) {
-    case 'GET':
-      return getHandler(req, res);
-
-    case 'POST':
-      return postHandler(req, res);
-
-    case 'PUT':
-      return putHandler(req, res);
-
-    case 'DELETE':
-      return deleteHandler(req, res);
-
-    case 'OPTIONS':
-      return respond(res, 200, 'application/json');
-
-    default:
-      return respond(res, 404, 'application/json', {
-        message: 'Not Found',
-      });
-  }
+app.get('/doors', (_, res) => {
+  const doorsData = loadData('doors');
+  res.json(doorsData);
 });
 
-// Start the server on port 1338
-const PORT = 1338;
-server.listen(PORT, () => {
+app.get('/doors/:id', (req, res) => {
+  const doorsData = loadData('doors');
+  const door = doorsData.find((door) => door.id === req.params.id);
+  if (door) {
+    return res.json(door);
+  }
+
+  res.status(404).json({ message: 'Door not found' });
+});
+
+app.post('/doors', (req, res) => {
+  const doorsData = loadData('doors');
+  const newDoor = { id: (doorsData.length + 1).toString(), ...req.body };
+  doorsData.push(newDoor);
+  saveData('doors', doorsData);
+  res.status(201).json(newDoor);
+});
+
+app.put('/doors/:id', (req, res) => {
+  const doorsData = loadData('doors');
+  const doorIndex = doorsData.findIndex((door) => door.id === req.params.id);
+
+  // dont allow to update 'id' field
+  delete req.body.id;
+
+  if (doorIndex !== -1) {
+    doorsData[doorIndex] = { ...doorsData[doorIndex], ...req.body };
+    saveData('doors', doorsData);
+    return res.status(204);
+  }
+
+  res.status(404).json({ message: 'Door not found' });
+});
+
+app.delete('/doors/:id', (req, res) => {
+  const doorsData = loadData('doors');
+  const doorIndex = doorsData.findIndex((door) => door.id === req.params.id);
+  if (doorIndex !== -1) {
+    doorsData.splice(doorIndex, 1);
+    saveData('doors', doorsData);
+    return res.status(204);
+  }
+
+  res.status(404).json({ message: 'Door not found' });
+});
+
+app.listen(PORT, () => {
   console.log(`🚀 server is running on ${PORT}`);
 });
