@@ -13,7 +13,7 @@
 
 2. **Install PWA Assets Generator Plugin**: Generate PWA assets like icons and splash screens using `npm i @vite-pwa/assets-generator -D`.
 
-3. **Configure Vite PWA Plugin**: Modify your `vite.config.js` or `vite.config.ts` to include the Vite PWA plugin configuration. Ensure the plugins array includes the PWA plugin settings with appropriate options for registration type, assets, and manifest configuration.
+3. **Configure Vite PWA Plugin**: Modify your `vite.config.js` to include the Vite PWA plugin configuration. Ensure the plugins array includes the PWA plugin settings with appropriate options for registration type, assets, and manifest configuration.
 
 4. **Add NPM Script for Generating PWA Assets**: In `package.json`, add a script `"generate-pwa-assets": "pwa-assets-generator --preset minimal public/logo.svg"` to facilitate the assets generation process.
 
