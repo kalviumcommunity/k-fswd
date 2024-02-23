@@ -16,7 +16,7 @@ You should have a basic understanding of React and Node.js. Familiarity with npm
 
 3. **Wrap the App Component** 🎁: Wrap your main `<App />` component with `<BrowserRouter>` in your `index.js` file.
 
-4. **Import Route and Switch** 🔄: Back in your `App.js` file, import the `Route` and `Switch` components from `react-router-dom`.
+4. **Import Routes and Route** 🔄: Back in your `App.js` file, import the `Routes` and `Route` components from `react-router-dom`.
 
 5. **Create the Home Component** 🏠: Create a new component named `Home` that returns a div with a welcome note.
 
