@@ -51,7 +51,7 @@ const loadData = (key) => {
 const saveData = (key, data) => {
   try {
     const dbPath = path.resolve(__dirname, 'db.json');
-    const existingData = loadData();
+    const existingData = loadData('doors');
     const newData = { ...existingData, [key]: data };
     const dataJSON = JSON.stringify(newData, null, 2);
     fs.writeFileSync(dbPath, dataJSON);
